@@ -42,4 +42,12 @@ window.onload = function () {
   });
 
   updateIcon();
+
+  // Easter Egg Activation (Press "Shift + E")
+  document.addEventListener("keydown", function (event) {
+    if (event.shiftKey && event.key === "E") {
+      alert("You've discovered an Easter Egg!");
+      // Additional surprise effect or content can be added here.
+    }
+  });
 };

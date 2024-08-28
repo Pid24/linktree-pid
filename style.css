@@ -26,6 +26,48 @@ body.dark-mode {
   color: #e0e0e0;
 }
 
+/* Background Animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(270deg, #667eea, #764ba2, #a4508b);
+  background-size: 600% 600%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Floating Social Media Icons */
+.floating-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.floating-icons a {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.2);
+  color: #4caf50;
+}
+
 /* Container for all content */
 .content {
   display: flex;
